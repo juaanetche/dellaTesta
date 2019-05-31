@@ -10,7 +10,7 @@
 body {
     display: grid;
     grid-template-areas: "header" "content" "footer";
-    background: linear-gradient(rgba(255, 26, 34, 0.6), rgba(40, 43, 116, 0.6)), url("../img/fondo_pelotas.jpeg");
+    background: linear-gradient(rgba(255, 26, 34, 0.6), rgba(40, 43, 116, 0.6)), url("../img/fondo_pelotas.png");
     background-size: contain;
     /*rgba(255, 26, 34, 0.6)*/
 
@@ -31,16 +31,13 @@ body {
         /*border-color: aliceblue;
         /*background: url("../img/textures/prism.png");
         /*background-repeat: repeat;*/
-
     }
-
-
-        .header div {
+        .header div{
             display: flex;
             flex: 1 1 auto;
             justify-self: left;
             margin: 1% 1% 0 1%;
-            
+        
         }
             .header div h1 {
                 font-family: 'Archivo Black', sans-serif;
@@ -153,9 +150,9 @@ body {
 /* EMPIEZA EL FOOTER */
 
         .footer {
-            padding: 2%;
+            padding: 0 2% 2% 2%;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             background-color: black;
             align-items: center;
         }
@@ -176,16 +173,52 @@ body {
 
         .footer .social {
             display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            flex: 1 1 auto;
+            position: fixed;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px 20px 0 0;
+            bottom: 0;
+            float: left;
+            width: 50%;
+            justify-content: space-evenly;
             }
 
+            .footer .social div {
+                padding: 1% 1% 1% 1%;
+            }
             .footer .icon {
-                padding: 1% 1% 1% 4%;
+                width: 100%;
             }
                 .footer .icon img{
-                    width: 50px;
+                    border: rgba(255, 26, 34, 0.6);
+                    border-radius: 10px 0px 10px 10px;
+                    width: 30px;
+                    background: rgba(255, 26, 34, 1);
+                    padding: 10px;
+                    /*clip-path: polygon(16% 0, 100% 0, 100% 0, 100% 81%, 84% 100%, 14% 100%, 0 86%, 0 13%);*/
+                    /*clip-path: inset(0 0 0 0);*/
+                }
+
+                .footer .icon img:hover {
+                    /*clip-path: inset(0 0 0 0);*/
+                    clip-path: polygon(16% 0, 100% 0, 100% 0, 100% 81%, 84% 100%, 14% 100%, 0 86%, 0 13%);
+                    
+
+                }
+
+                .footer .icon #borrar {
+                    color: white;
+                    vertical-align:center;
+                    align-self: center;
+                    position: absolute;
+                    background-color: #3B5998;
+                    font-family: 'Roboto', sans-serif;
+                    font-style: italic;
+                    font-weight: 400;
+                    clip-path: polygon(0 0, 91% 0, 100% 14%, 100% 91%, 90% 100%, 0 100%, 0 100%, 0 0);
+                    margin-left: 0;
+                    background: rgba(255, 26, 34, 1);
+
+                    
                 }
 
 
